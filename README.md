@@ -37,20 +37,20 @@ PhishGuard extracts **30 structural features** from any URL and classifies it us
                    └──────────────────────────────────────────────┘
 
  ┌─────────────┐        ┌─────────────────┐        ┌──────────────────┐
- │  Web UI     │  POST  │  FastAPI Server  │  ───►  │  Feature         │
- │  (HTML/JS)  │ ─────► │  /predict        │        │  Extractor       │
+ │  Web UI     │  POST  │  FastAPI Server │  ───►  │  Feature         │
+ │  (HTML/JS)  │ ─────► │  /predict       │        │  Extractor       │
  └─────────────┘        └────────┬────────┘        │  (30 features)   │
-                                 │                  └────────┬─────────┘
-                                 │                           │
-                                 ▼                           ▼
-                         ┌───────────────┐          ┌────────────────┐
+                                 │                 └────────┬─────────┘
+                                 │                          │
+                                 ▼                          ▼
+                         ┌────────────────┐         ┌────────────────┐
                          │  JSON Response │ ◄─────  │  MLP Neural    │
                          │  verdict +     │         │  Network Model │
                          │  confidence    │         │  (.pkl)        │
-                         └───────────────┘          └────────────────┘
+                         └────────────────┘         └────────────────┘
 
  ┌──────────────────────────────────────────────────────────────────┐
- │  Training Pipeline:  CSV ──► MongoDB ──► train.py ──► model.pkl │
+ │  Training Pipeline:  CSV ──► MongoDB ──► train.py ──► model.pkl  │
  └──────────────────────────────────────────────────────────────────┘
 ```
 
@@ -241,6 +241,6 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 <div align="center">
 
-**Built with ❤️ by [Ziad Alaa](https://github.com/ziadalaa7)**
+**Built by Ramez Fawzy Ragheb**
 
 </div>
