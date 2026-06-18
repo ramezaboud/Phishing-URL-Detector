@@ -1,0 +1,27 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+
+# Environment
+.env
+
+# Model artifacts
+*.pkl
+
+# Data files
+*.csv
+
+# Documents (not needed in repo)
+*.pptx
+*.docx
+
+# Archives
+*.zip
+
+# IDE
+.vscode/
+.idea/
+*.swp
